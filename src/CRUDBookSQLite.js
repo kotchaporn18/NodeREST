@@ -74,7 +74,7 @@ app.put('/books/:id', (req, res) => {
 
 // route to delete a book
 app.delete('/books/:id', (req, res) => {
-    db.run('DETETE FROM books WHERE id = ?', req.params.id, function(err) {
+    db.run('DELETE FROM books WHERE id = ?', req.params.id, function(err) {
         if (err) {
             res.status(500).send(err);
         } else {
