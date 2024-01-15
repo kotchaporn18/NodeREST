@@ -7,7 +7,7 @@ function isValidIP(ip) {
 
     
     for (let segment of ipSegments) {
-        if (!/^\d+$/.test(segment) || parseInt(segment) < 0 || parseInt(segment) > 255) {
+        if (!/^\d+$/.test(segment) || parseInt(segment)  < 0 || parseInt(segment) > 255) {
             return false;
         }
     }
