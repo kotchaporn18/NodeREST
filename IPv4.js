@@ -1,5 +1,18 @@
 function isValidIP(ip) {
-   
+    const ipSegments = ip.split('.');
+
+    if (ipSegments.length !== 4) {
+        return false;
+    }
+
+    
+    for (let segment of ipSegments) {
+        if (!/^\d+$/.test(segment) || parseInt(segment) < 0 || parseInt(segment) > 255) {
+            return false;
+        }
+    }
+
+    return true;
 }
 
 console.log(isValidIP("1.2.3.4"));       
